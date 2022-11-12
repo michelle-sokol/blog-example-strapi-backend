@@ -1,0 +1,37 @@
+{
+  "name": "strapi-base-cms",
+  "private": true,
+  "version": "1.0.1",
+  "description": "A Strapi application",
+  "scripts": {
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.1.11",
+    "@strapi/plugin-i18n": "4.1.11",
+    "@strapi/plugin-seo": "^1.7.2",
+    "@strapi/plugin-users-permissions": "4.1.11",
+    "@strapi/provider-upload-cloudinary": "^4.1.11",
+    "@strapi/strapi": "4.1.11",
+    "better-sqlite3": "7.5.3",
+    "lodash.set": "^4.3.2",
+    "mime-types": "^2.1.35",
+    "pg": "^8.7.3",
+    "strapi-plugin-local-image-sharp": "^1.0.2"
+  },
+  "author": {
+    "name": "Nick Lima"
+  },
+  "strapi": {
+    "uuid": "389f9246-11b5-43fb-9690-b4782a36ba22"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

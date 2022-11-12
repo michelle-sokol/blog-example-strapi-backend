@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "writers",
+  "info": {
+    "singularName": "writer",
+    "pluralName": "writers",
+    "displayName": "Writer",
+    "name": "writer",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "about": {
+      "type": "text",
+      "required": true
+    },
+    "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "social": {
+      "displayName": "social ",
+      "type": "component",
+      "repeatable": true,
+      "component": "sections.social",
+      "required": true
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "author"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}
